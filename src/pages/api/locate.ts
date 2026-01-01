@@ -8,10 +8,10 @@ const locate = async (ip: string) => {
     const data = await location.json();
 
     const response = await fetch(
-      `${import.meta.env.UPSTASH_REDIS_REST_URL}/set/visitor/${encodeURI(`${data.city}, ${data.countryCode === "US" ? data.region : data.countryCode}`)}`,
+      `${process.env.UPSTASH_REDIS_REST_URL}/set/visitor/${encodeURI(`${data.city}, ${data.countryCode === "US" ? data.region : data.countryCode}`)}`,
       {
         headers: {
-          Authorization: `Bearer ${import.meta.env.UPSTASH_REDIS_REST_TOKEN}`,
+          Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}`,
         },
       },
     );
@@ -25,5 +25,7 @@ const locate = async (ip: string) => {
 export const GET: APIRoute = async (props) => {
   const status = await locate(props.clientAddress);
 
-  return new Response(JSON.stringify({ status: status }));
+  return new Response(
+    JSON.stringify({ status: status, ip: props.clientAddress }),
+  );
 };

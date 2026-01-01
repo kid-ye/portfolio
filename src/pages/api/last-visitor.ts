@@ -5,10 +5,10 @@ export const prerender = false;
 const locate = async () => {
   try {
     const response = await fetch(
-      `${import.meta.env.UPSTASH_REDIS_REST_URL}/get/visitor/`,
+      `${process.env.UPSTASH_REDIS_REST_URL}/get/visitor/`,
       {
         headers: {
-          Authorization: `Bearer ${import.meta.env.UPSTASH_REDIS_REST_TOKEN}`,
+          Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}`,
         },
       },
     );
