@@ -1,6 +1,8 @@
 ---
 import Sun from "./icons/sun.astro";
 import Moon from "./icons/moon.astro";
+
+const { isHome = false } = Astro.props;
 ---
 
 <script>
@@ -42,7 +44,10 @@ import Moon from "./icons/moon.astro";
 </script>
 
 <footer
-  class="animate-intro mt-12 mb-16 flex items-center justify-between opacity-0 [animation-delay:0.55s]"
+  class:list={[
+    "mt-12 mb-16 flex items-center justify-between",
+    isHome && "animate-intro opacity-0 [animation-delay:0.55s]",
+  ]}
 >
   <div>
     <p class="text-sm font-light text-neutral-500 dark:text-neutral-400">

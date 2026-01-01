@@ -39,25 +39,13 @@ export const GET: APIRoute = async ({ request }) => {
             type: "div",
             props: {
               style: {
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
+                fontSize: 64,
+                fontFamily: "Inter",
+                color: "#000000",
+                maxWidth: "1200px",
+                letterSpacing: "-0.04em",
               },
-              children: [
-                {
-                  type: "div",
-                  props: {
-                    style: {
-                      fontSize: 64,
-                      fontFamily: "Inter",
-                      color: "#000000",
-                      maxWidth: "900px",
-                      letterSpacing: "-0.04em",
-                    },
-                    children: title,
-                  },
-                },
-              ],
+              children: title,
             },
           },
         ],

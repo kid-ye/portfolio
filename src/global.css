@@ -128,7 +128,11 @@
   }
 
   ::selection {
-    @apply bg-neutral-950 text-neutral-50 dark:bg-neutral-50 dark:text-neutral-950;
+    @apply bg-neutral-950 text-neutral-50;
+  }
+
+  .dark ::selection {
+    @apply bg-neutral-50 text-neutral-950;
   }
 
   img {
