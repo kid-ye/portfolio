@@ -2,12 +2,24 @@
 import Layout from "../../components/layout.astro";
 import IndexIcon from "../../components/icons/index.astro";
 
-const posts = await Astro.glob("./*.mdx");
-posts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-);
+const postModules = import.meta.glob<{
+  frontmatter: {
+    title: string;
+    description: string;
+    pubDate: string;
+  };
+}>("./*.mdx", { eager: true });
+
+const posts = Object.entries(postModules)
+  .map(([path, post]) => ({
+    ...post,
+    url: path.replace(".mdx", "").replace("./", "/writing/"),
+  }))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
 ---
 
 <Layout title="Writing">
