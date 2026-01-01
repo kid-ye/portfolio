@@ -17,9 +17,8 @@ const { frontmatter } = Astro.props;
     <header>
       <h1 class="font-semibold">{frontmatter.title}</h1>
     </header>
-    <article class="prose dark:prose-invert prose-neutral mt-4 max-w-none">
+    <article class="prose prose-neutral mt-4 max-w-none dark:prose-invert">
       <slot />
     </article>
   </main>
 </Layout>
-
