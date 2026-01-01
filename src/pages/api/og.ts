@@ -3,9 +3,20 @@ import { ImageResponse } from "@vercel/og";
 
 export const prerender = false;
 
+async function loadGoogleFont(font: string, weight: number, text: string) {
+  const url = `https://fonts.googleapis.com/css2?family=${font}:wght@${weight}&text=${encodeURIComponent(text)}`;
+  const css = await fetch(url).then((res) => res.text());
+  const match = css.match(/url\((https:\/\/fonts\.gstatic\.com\/[^)]+)\)/);
+  if (!match || !match[1]) throw new Error("Font not found");
+  const fontUrl = match[1];
+  return fetch(fontUrl).then((res) => res.arrayBuffer());
+}
+
 export const GET: APIRoute = async ({ request }) => {
   const url = new URL(request.url);
   const title = url.searchParams.get("title") || "Harsh Singh";
+
+  const interSemibold = await loadGoogleFont("Inter", 600, title);
 
   return new ImageResponse(
     {
@@ -19,7 +30,8 @@ export const GET: APIRoute = async ({ request }) => {
           backgroundImage: "url(https://harshsingh.me/og-blog-template.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: "60px",
+          paddingLeft: "50px",
+          paddingBottom: "45px",
           justifyContent: "flex-end",
         },
         children: [
@@ -36,23 +48,13 @@ export const GET: APIRoute = async ({ request }) => {
                   type: "div",
                   props: {
                     style: {
-                      fontSize: 56,
-                      fontWeight: 600,
-                      color: "#fafafa",
-                      lineHeight: 1.2,
+                      fontSize: 64,
+                      fontFamily: "Inter",
+                      color: "#000000",
                       maxWidth: "900px",
+                      letterSpacing: "-0.04em",
                     },
                     children: title,
-                  },
-                },
-                {
-                  type: "div",
-                  props: {
-                    style: {
-                      fontSize: 28,
-                      color: "#a3a3a3",
-                    },
-                    children: "harshsingh.me",
                   },
                 },
               ],
@@ -64,6 +66,14 @@ export const GET: APIRoute = async ({ request }) => {
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          name: "Inter",
+          data: interSemibold,
+          style: "normal",
+          weight: 600,
+        },
+      ],
     },
   );
 };

@@ -57,12 +57,12 @@ const socials = [
 <main>
   <section class="mt-12">
     <h2
-      class="mb-3 animate-intro font-medium opacity-0 [animation-delay:0.35s]"
+      class="animate-intro mb-3 font-medium opacity-0 [animation-delay:0.35s]"
     >
       Where
     </h2>
     <div
-      class="relative h-fit w-fit animate-intro overflow-hidden rounded-3xl opacity-0 [animation-delay:0.4s]"
+      class="animate-intro relative h-fit w-fit overflow-hidden rounded-3xl opacity-0 [animation-delay:0.4s]"
     >
       <img
         src="/cloud.webp"
@@ -70,7 +70,7 @@ const socials = [
         height="347"
         alt=""
         draggable="false"
-        class="absolute z-10 animate-cloud blur-sm"
+        class="animate-cloud absolute z-10 blur-sm"
       />
       <img
         src="/plane.webp"
@@ -78,7 +78,7 @@ const socials = [
         height="56"
         alt=""
         draggable="false"
-        class="absolute z-10 -translate-x-96 animate-plane [animation-delay:5s]"
+        class="animate-plane absolute z-10 -translate-x-96 [animation-delay:5s]"
       />
       <img
         src="/plane-shadow.webp"
@@ -86,7 +86,7 @@ const socials = [
         height="24"
         alt=""
         draggable="false"
-        class="absolute z-10 -translate-x-96 animate-plane-shadow [animation-delay:5s]"
+        class="animate-plane-shadow absolute z-10 -translate-x-96 [animation-delay:5s]"
       />
       <img
         width="500"
@@ -110,27 +110,27 @@ const socials = [
         href="https://en.wikipedia.org/wiki/San_Francisco,_California"
         target="_blank"
         rel="noreferrer"
-        class="exclude absolute bottom-0 right-0 mb-3 mr-3 select-none rounded-md border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-xs text-neutral-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+        class="exclude absolute right-0 bottom-0 mr-3 mb-3 rounded-md border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-xs text-neutral-600 select-none dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
         >Austin, TX</a
       >
       <div aria-hidden>
         <div
-          class="absolute left-[53%] top-[60%] h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-marker rounded-full bg-blue-500"
+          class="animate-marker absolute top-[60%] left-[53%] h-6 w-6 rounded-full bg-blue-500"
         >
         </div>
         <div
-          class="absolute left-[53%] top-[60%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-neutral-50 bg-blue-500 shadow-marker"
+          class="shadow-marker absolute top-[60%] left-[53%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-neutral-50 bg-blue-500"
         >
         </div>
       </div>
     </div>
   </section>
   <section class="mt-12">
-    <h2 class="mb-3 animate-intro font-medium opacity-0 [animation-delay:0.4s]">
+    <h2 class="animate-intro mb-3 font-medium opacity-0 [animation-delay:0.4s]">
       Projects
     </h2>
     <ul
-      class="relative flex animate-intro flex-col gap-y-4 opacity-0 [animation-delay:0.45s]"
+      class="animate-intro relative flex flex-col gap-y-4 opacity-0 [animation-delay:0.45s]"
     >
       {
         projects.map((project) => (
@@ -144,7 +144,7 @@ const socials = [
               {project.label}
               <Link />
             </a>
-            <p class="mt-1 font-light leading-snug text-neutral-500 dark:text-neutral-400">
+            <p class="mt-1 leading-snug font-light text-neutral-500 dark:text-neutral-400">
               {project.description}
             </p>
             {project.label === "kmenu" && (
@@ -171,7 +171,7 @@ const socials = [
         ))
       }
     </ul>
-    <section class="mt-12 animate-intro opacity-0 [animation-delay:0.5s]">
+    <section class="animate-intro mt-12 opacity-0 [animation-delay:0.5s]">
       <h2 class="mb-3 font-medium">Connect</h2>
       <div class="flex flex-row flex-wrap items-center gap-x-1 gap-y-2">
         {
@@ -180,7 +180,7 @@ const socials = [
               href={social.href}
               target="_blank"
               rel="noreferrer"
-              class="exclude flex select-none items-center rounded-full bg-neutral-200 px-3 py-1 text-sm transition-colors hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+              class="exclude flex items-center rounded-full bg-neutral-200 px-3 py-1 text-sm transition-colors select-none hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
             >
               {social.label}
               <Link />
