@@ -1,5 +1,5 @@
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import vercel from "@astrojs/vercel";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
@@ -8,7 +8,10 @@ import rehypeExternalLinks from "rehype-external-links";
 // https://astro.build/config
 export default defineConfig({
   site: "https://harshsingh.me",
-  integrations: [tailwind(), sitemap(), mdx()],
+  integrations: [sitemap(), mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   output: "static",
   adapter: vercel(),
   markdown: {
