@@ -1,8 +1,33 @@
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h2: {
+              fontSize: "16px",
+              fontWeight: "500",
+              marginTop: "1em",
+              marginBottom: "1em",
+            },
+            li: {
+              marginTop: "0",
+              marginBottom: "0",
+            },
+            a: {
+              fontWeight: "400",
+            },
+            "ol > li::marker": {
+              color: "var(--tw-prose-body)",
+            },
+          },
+        },
+      },
       screens: {
         xs: "500px",
       },
@@ -83,5 +108,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };

@@ -39,11 +39,11 @@ body {
     "Inter",
     sans-serif;
   letter-spacing: -2%;
-  @apply bg-neutral-100;
+  @apply bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100;
 }
 
 ::selection {
-  @apply bg-neutral-950 text-neutral-50;
+  @apply bg-neutral-950 text-neutral-50 dark:bg-neutral-50 dark:text-neutral-950;
 }
 
 img {
@@ -52,31 +52,33 @@ img {
 
 a:not(.exclude) {
   text-decoration-style: wavy;
-  @apply underline decoration-neutral-300;
+  @apply underline decoration-neutral-300 dark:decoration-neutral-600;
 }
 
-.clock {
-  --seconds-deg: calc((var(--now-s) / 60) * 360);
-  --minutes-deg: calc(((var(--now-m) / 60) * 360) + ((var(--now-s) / 60) * 6));
-  --hours-deg: calc(((var(--now-h) / 12) * 360) + ((var(--now-m) / 60) * 30));
-  @apply relative m-0 flex h-5 w-5 rotate-180 items-center justify-center rounded-full border border-neutral-400;
+.playing-container {
+  @apply relative flex h-5 items-center;
 }
 
-.clock > * {
-  @apply absolute left-1/2 top-1/2 rounded-full bg-neutral-500 [transform-origin:center_0];
+.playing-container > * {
+  @apply mr-0.5 h-1 w-[3px] rounded-sm bg-neutral-300;
 }
 
-.seconds {
-  @apply h-2 w-px;
-  transform: rotate(calc(var(--seconds-deg) * 1deg));
+@keyframes playing {
+  0% {
+    height: 3px;
+  }
+
+  50% {
+    height: 12px;
+  }
+
+  to {
+    height: 3px;
+  }
 }
 
-.minutes {
-  @apply h-1.5 w-px;
-  transform: rotate(calc(var(--minutes-deg) * 1deg));
-}
-
-.hours {
-  transform: rotate(calc(var(--hours-deg) * 1deg));
-  @apply h-1 w-px;
+html.skip-intro .animate-intro {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
