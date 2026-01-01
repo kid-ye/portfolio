@@ -28,5 +28,9 @@
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2"
+  },
+  "overrides": {
+    "wrap-ansi": "^9.0.0",
+    "string-width": "^7.0.0"
   }
 }
