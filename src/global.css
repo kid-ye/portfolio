@@ -141,30 +141,6 @@
   }
 }
 
-@layer components {
-  .playing-container {
-    @apply relative flex h-5 items-center;
-  }
-
-  .playing-container > * {
-    @apply mr-0.5 h-1 w-[3px] rounded-sm bg-neutral-300;
-  }
-}
-
-@keyframes playing {
-  0% {
-    height: 3px;
-  }
-
-  50% {
-    height: 12px;
-  }
-
-  to {
-    height: 3px;
-  }
-}
-
 @layer utilities {
   html.skip-intro .animate-intro {
     animation: none !important;
@@ -173,24 +149,22 @@
   }
 }
 
-@layer components {
-  .prose h2 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+.prose h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
-  .prose li {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+.prose li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-  .prose a {
-    font-weight: 400;
-  }
+.prose a {
+  font-weight: 400;
+}
 
-  .prose ol > li::marker {
-    color: var(--tw-prose-body);
-  }
+.prose ol > li::marker {
+  color: var(--tw-prose-body);
 }
