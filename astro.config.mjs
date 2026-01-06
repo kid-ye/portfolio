@@ -7,8 +7,7 @@ import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kid-ye.github.io",
-  base: "/portfolio",
+  site: "https://portfolio-4v0.pages.dev",
   integrations: [sitemap(), mdx()],
   vite: {
     plugins: [tailwindcss()],
