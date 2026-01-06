@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Yash Gupta's Portfolio
 
 Personal portfolio website built with Astro, showcasing my projects, experience, and education.
@@ -46,3 +47,6 @@ Server should now be running on [localhost:4321](http://localhost:4321).
 ## License
 
 This project is licensed with the "[Do What The F\*ck You Want To Public License (WTFPL)](https://choosealicense.com/licenses/wtfpl/)" license.
+=======
+yash portfolio nothing much thanks
+>>>>>>> 84bf4b389f36b2c3bc0572b8045166597d995948
