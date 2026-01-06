@@ -3,16 +3,12 @@ import "../global.css";
 import Footer from "./footer.astro";
 
 const {
-  title = "Harsh Singh",
-  description = "The website and design portfolio of Harsh Singh.",
+  title = "Yash Gupta",
+  description = "The website and portfolio of Yash Gupta.",
   ogImage,
 } = Astro.props;
 
-const resolvedOgImage =
-  ogImage ||
-  (title !== "Harsh Singh"
-    ? `https://harshsingh.me/api/og?title=${encodeURIComponent(title)}`
-    : "https://harshsingh.me/og.png");
+const resolvedOgImage = ogImage || "https://yashgupta.me/og.png";
 ---
 
 <html lang="en">
@@ -65,17 +61,14 @@ const resolvedOgImage =
       name="description"
       content={description}
     />
-    <link rel="author" href="https://harshsingh.me" /><meta
+    <link rel="author" href="https://yashgupta.me" /><meta
       name="author"
-      content="Harsh Singh"
+      content="Yash Gupta"
     />
-    <meta
-      name="keywords"
-      content="Harsh Singh,haaarshsingh,Harsh,haaarshsingh"
-    />
-    <meta name="creator" content="Harsh Singh" /><meta
+    <meta name="keywords" content="Yash Gupta,kid-ye,Yash" />
+    <meta name="creator" content="Yash Gupta" /><meta
       name="publisher"
-      content="Harsh Singh"
+      content="Yash Gupta"
     />
     <meta name="robots" content="index, follow, nocache" /><meta
       name="googlebot"
@@ -83,7 +76,7 @@ const resolvedOgImage =
     />
     <meta name="category" content="technology" /><link
       rel="canonical"
-      href="https://harshsingh.me"
+      href="https://yashgupta.me"
     />
     <meta
       name="google-site-verification"
@@ -93,14 +86,14 @@ const resolvedOgImage =
       name="yandex-verification"
       content="cfc27cbb03eb0a9c"
     />
-    <meta name="me" content="h@harshsingh.me" /><meta
+    <meta name="me" content="yashguptabms@gmail.com" /><meta
       property="og:title"
       content={title}
     />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://harshsingh.me" /><meta
+    <meta property="og:url" content="https://yashgupta.me" /><meta
       property="og:site_name"
-      content="Harsh Singh"
+      content="Yash Gupta"
     />
     <meta property="og:locale" content="en-US" /><meta
       property="og:image"
@@ -114,20 +107,20 @@ const resolvedOgImage =
       name="twitter:card"
       content="summary_large_image"
     />
-    <meta name="twitter:site:id" content="haaarshsingh" /><meta
+    <meta name="twitter:site:id" content="ye_yash" /><meta
       name="twitter:creator"
-      content="@haaarshsingh"
+      content="@ye_yash"
     />
-    <meta name="twitter:creator:id" content="haaarshsingh" /><meta
+    <meta name="twitter:creator:id" content="ye_yash" /><meta
       name="twitter:title"
       content={title}
     />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={resolvedOgImage} /><link
       rel="icon"
-      href="/favicon.ico"
+      href="/ye.jpg"
     />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" /><meta
+    <link rel="apple-touch-icon" href="/ye.jpg" /><meta
       name="next-size-adjust"
     />
     <style is:global>
@@ -153,7 +146,7 @@ const resolvedOgImage =
   <body>
     <div class="flex justify-center">
       <div
-        class="xs:w-[500px] mt-16 flex min-h-screen w-[90vw] flex-col justify-between"
+        class="xs:w-[650px] mt-16 flex min-h-screen w-[90vw] flex-col justify-between"
       >
         <slot />
         <Footer isHome={Astro.url.pathname === "/"} />

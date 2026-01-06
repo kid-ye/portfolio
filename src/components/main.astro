@@ -3,49 +3,37 @@ import Link from "./icons/link.astro";
 
 const projects = [
   {
-    label: "Vaayu",
-    href: "vaayu.lol",
-    description: "2025 · Tiny (<5kB), zero-config static site generator.",
-  },
-  {
-    label: "kmenu",
-    href: "kmenu.dev",
+    label: "Network Intrusion Detection Analysis Platform",
+    href: "github.com/kid-ye/Network-Intrusion-Detection-Analysis",
     description:
-      "2022 · A versatile, accessible and animated ⌘K component for React. Combines elements of the greatest command menu implementations to provide the most intuitive, streamlined, and robust application navigation experience for users.",
+      "Full-stack analytics dashboard for comparing and visualizing machine learning intrusion detection models using the CICIDS-2017 dataset, featuring RBAC, OAuth authentication, and interactive metric visualizations.",
   },
   {
-    label: "Qursor",
-    href: "qursor.harshsingh.me",
-    description: "2021 · Plug n' play cursors for React.",
+    label: "Digital Oscilloscope",
+    href: "github.com/kid-ye/signal_generator_esp32",
+    description:
+      "Low-cost, portable, and WiFi-enabled function generator built on the ESP32 to replace expensive laboratory equipment for students and hobbyists. Generates sine, square/rectangle, triangle, and sawtooth waveforms across a wide frequency range (Hz to tens of MHz) with fine-grained control over frequency, duty cycle, amplitude, and resolution. Features a browser-based web interface for remote control, real-time FFT spectrum visualization on an optional OLED display, touch and physical input support via GPIO, preset storage using NVS, and a modular firmware design implemented in Arduino for extensibility and ease of use.",
   },
   {
-    label: "snip",
-    href: "snip.tf",
-    description: "2020 · Modern pastebin written in Actix.",
-  },
-  {
-    label: "dots",
-    href: "github.com/haaarshsingh/dots",
-    description: "2020 · Pastel-themed i3wm and Arch Linux rice.",
+    label: "PYQ Archive",
+    href: "github.com/kid-ye/bmsce_papers_ripper_ui",
+    description:
+      "Academic document retrieval and analysis platform providing unrestricted access to previous year question papers. Curated ~10 GB of PDFs (~12,000 papers), normalized noisy metadata, and indexed documents in SQLite for fast querying. Established SHA-256–based document identity for deduplication and integrity, modeled multi-branch paper visibility using many-to-many relationships, and built a Streamlit interface for search and secure downloads. Implemented rule-based PDF text extraction and unit-wise parsing for practice-oriented study, with analytics to surface exam trends and paper distribution.",
   },
 ];
 
 const socials = [
   {
-    label: "h@harshsingh.me",
-    href: "mailto:h@harshsingh.me",
-  },
-  {
-    label: "X",
-    href: "https://x.com/haaarshsingh",
+    label: "mail-yash",
+    href: "mailto:yashguptabms@gmail.com",
   },
   {
     label: "GitHub",
-    href: "https://github.com/haaarshsingh",
+    href: "https://github.com/kid-ye",
   },
   {
     label: "Linkedin",
-    href: "https://www.linkedin.com/in/haaarshsingh",
+    href: "https://www.linkedin.com/in/ye-yash",
   },
   {
     label: "CV",
@@ -89,29 +77,19 @@ const socials = [
         class="animate-plane-shadow absolute z-10 -translate-x-96 [animation-delay:5s]"
       />
       <img
-        width="500"
-        height="250"
-        src="/map.webp"
+        width="650"
+        height="325"
+        src="/map-dark-2.png"
         alt="Map with marker east of Austin, TX"
         loading="eager"
         draggable="false"
-        class="dark:hidden"
-      />
-      <img
-        width="500"
-        height="250"
-        src="/map-dark.webp"
-        alt="Map with marker east of Austin, TX"
-        loading="eager"
-        draggable="false"
-        class="hidden dark:block"
       />
       <a
-        href="https://en.wikipedia.org/wiki/San_Francisco,_California"
+        href="https://en.wikipedia.org/wiki/Bengaluru"
         target="_blank"
         rel="noreferrer"
         class="exclude absolute right-0 bottom-0 mr-3 mb-3 rounded-md border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-xs text-neutral-600 select-none dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
-        >Austin, TX</a
+        >Bengaluru, India</a
       >
       <div aria-hidden>
         <div
@@ -126,11 +104,85 @@ const socials = [
     </div>
   </section>
   <section class="mt-12">
-    <h2 class="animate-intro mb-3 font-medium opacity-0 [animation-delay:0.4s]">
+    <h2
+      class="animate-intro mb-3 font-medium opacity-0 [animation-delay:0.35s]"
+    >
+      Experience
+    </h2>
+    <ul
+      class="animate-intro relative flex flex-col gap-y-4 opacity-0 [animation-delay:0.4s]"
+    >
+      <li>
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium">Software Engineer Intern</h3>
+          <span class="text-sm text-neutral-500 dark:text-neutral-400"
+            >Aug - Sep 2025</span
+          >
+        </div>
+        <div class="flex items-center gap-2">
+          <img src="/mobirapid.png" alt="mobirapid Logo" class="h-10 w-12" />
+          <p class="text-sm text-neutral-600 dark:text-neutral-300">
+            MobiRapid Technologies Pvt. Ltd.
+          </p>
+        </div>
+        <p
+          class="mt-1 text-justify leading-snug font-light text-neutral-500 dark:text-neutral-400"
+        >
+          As a Software Engineering Intern at MobiRapid, I worked on designing
+          and building a full-stack inventory management system using React,
+          Node.js, and MongoDB. I implemented secure, role-based APIs and
+          real-time device lifecycle tracking to improve data accuracy and
+          operational visibility. I also optimized backend performance and
+          automated key workflows to reduce manual effort. My work focused on
+          building scalable, secure, and maintainable systems used by internal
+          teams.
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section class="mt-12">
+    <h2
+      class="animate-intro mb-3 font-medium opacity-0 [animation-delay:0.42s]"
+    >
+      Education
+    </h2>
+    <ul
+      class="animate-intro relative flex flex-col gap-y-4 opacity-0 [animation-delay:0.47s]"
+    >
+      <li>
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium">Bachelor of Technology</h3>
+          <span class="text-sm text-neutral-500 dark:text-neutral-400"
+            >2023 - 2027</span
+          >
+        </div>
+        <div class="flex items-center gap-2">
+          <img
+            src="/BMS_College_of_Engineering.svg"
+            alt="BMS College of Engineering Logo"
+            class="h-10 w-10"
+          />
+          <p class="text-sm text-neutral-600 dark:text-neutral-300">
+            BMS College of Engineering, Bengaluru
+          </p>
+        </div>
+        <p
+          class="mt-1 text-justify leading-snug font-light text-neutral-500 dark:text-neutral-400"
+        >
+          Relevant coursework : Operating Systems, ARM, Python, Cryptography,
+          Computer Networks, Artificial Intelligence
+        </p>
+      </li>
+    </ul>
+  </section>
+  <section class="mt-12">
+    <h2
+      class="animate-intro mb-3 font-medium opacity-0 [animation-delay:0.45s]"
+    >
       Projects
     </h2>
     <ul
-      class="animate-intro relative flex flex-col gap-y-4 opacity-0 [animation-delay:0.45s]"
+      class="animate-intro relative flex flex-col gap-y-4 opacity-0 [animation-delay:0.5s]"
     >
       {
         projects.map((project) => (
@@ -144,9 +196,46 @@ const socials = [
               {project.label}
               <Link />
             </a>
-            <p class="mt-1 leading-snug font-light text-neutral-500 dark:text-neutral-400">
+            <p class="mt-1 text-justify leading-snug font-light text-neutral-500 dark:text-neutral-400">
               {project.description}
             </p>
+            {project.label ===
+              "Network Intrusion Detection Analysis Platform" && (
+              <div class="mt-3">
+                <img
+                  src="/Network Intrusion Detection Analysis Platform/fraud_detection.jpeg"
+                  alt="Network Intrusion Detection Analysis Platform"
+                  draggable="false"
+                  class="w-full rounded-lg object-contain"
+                />
+              </div>
+            )}
+            {project.label === "Digital Oscilloscope" && (
+              <div class="mt-3 flex w-full items-center justify-between gap-[10px]">
+                <img
+                  src="/Digital Oscilloscope/sine.jpg"
+                  alt="Digital Oscilloscope - Sine Wave"
+                  draggable="false"
+                  class="w-[48%] rounded-lg object-contain"
+                />
+                <img
+                  src="/Digital Oscilloscope/tri_1.18k.jpg"
+                  alt="Digital Oscilloscope - Triangle Wave"
+                  draggable="false"
+                  class="w-[48%] rounded-lg object-contain"
+                />
+              </div>
+            )}
+            {project.label === "PYQ Archive" && (
+              <div class="mt-3">
+                <img
+                  src="/PYQ Archive/ripped papers data.png"
+                  alt="PYQ Archive Data"
+                  draggable="false"
+                  class="w-full rounded-lg object-contain"
+                />
+              </div>
+            )}
             {project.label === "kmenu" && (
               <div class="mt-3 flex w-full items-center justify-between gap-[10px]">
                 {[1, 2, 3].map((num) => (
