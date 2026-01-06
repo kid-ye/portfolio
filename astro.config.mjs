@@ -7,13 +7,13 @@ import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://harshsingh.me",
+  site: "https://kid-ye.github.io",
+  base: "/portfolio",
   integrations: [sitemap(), mdx()],
   vite: {
     plugins: [tailwindcss()],
   },
   output: "static",
-  adapter: vercel(),
   markdown: {
     shikiConfig: {
       themes: {

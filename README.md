@@ -1,39 +1,48 @@
-![image](https://harshsingh.me/og.png)
+# Yash Gupta's Portfolio
+
+Personal portfolio website built with Astro, showcasing my projects, experience, and education.
 
 ## Quickstart
 
-Clone the website locally:
+Clone the repository locally:
 
-```
-git clone https://github.com/haaarshsingh/www.git
+```bash
+git clone https://github.com/kid-ye/portfolio.git
 ```
 
 ### Setting up the project
 
 ```bash
-cd www
+cd portfolio
 
 # Install dependencies
-bun install
+npm install
 ```
 
-### Starting server
+### Starting development server
 
 ```bash
-bun dev
+npm run dev
 ```
 
-Server should now be running on [localhost](https://localhost:3000).
+Server should now be running on [localhost:4321](http://localhost:4321).
 
-### Database
+## Features
 
-This website uses [Upstash](https://upstash.com) to store the location of the last visitor. Sign up for an account, and replace the following API keys in `.env.EXAMPLE` with your own:
+- 🎨 Custom font integration (AwesomeBi_polar)
+- 📱 Responsive design with Tailwind CSS
+- 🌙 Dark mode support
+- 📊 Project showcases with images
+- 💼 Experience and education sections
+- 🗺️ Interactive map component
 
-```
-UPSTASH_REDIS_REST_URL=""
-UPSTASH_REDIS_REST_TOKEN=""
-```
+## Tech Stack
 
-## Forking
+- [Astro](https://astro.build) - Web framework
+- [Tailwind CSS](https://tailwindcss.com) - Styling
+- TypeScript - Type safety
+- MDX - Content authoring
 
-This project is licensed with the "[Do What The F\*ck You Want To Public License (wtfpl)](https://choosealicense.com/licenses/wtfpl/)" license, and the permissions/limitations are pretty self explanatory. Attribution isn't required, but I'd appreciate it.
+## License
+
+This project is licensed with the "[Do What The F\*ck You Want To Public License (WTFPL)](https://choosealicense.com/licenses/wtfpl/)" license.
